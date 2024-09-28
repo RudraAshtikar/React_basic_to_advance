@@ -6,4 +6,4 @@ function Chai() {
   );
 }
 export default Chai;
-// .jsx is a component
+// .jsx means that this is a component file
