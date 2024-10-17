@@ -22,5 +22,4 @@ function App() {
     </>
   );
 }
-// {anything} written in curly braces disturbs the site and it does not work
 export default App;
