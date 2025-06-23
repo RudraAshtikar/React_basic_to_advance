@@ -5,8 +5,11 @@ function App() {
   let [counter, setCounter] = useState(15);
 
   const addValue = () => {
-    setCounter((counter) => counter + 1);
-    setCounter((counter) => counter + 1);
+    if (counter === 20) {
+      alert("Value is already 20");
+    } else {
+      setCounter((counter) => counter + 1);
+    }
   };
 
   const removeValue = () => {
