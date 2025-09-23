@@ -1,11 +1,5 @@
-import { useState } from "react";
-
 function App() {
-  return (
-    <>
-      <h1 className="bg-green-200 ">react router</h1>
-    </>
-  );
+  return <></>;
 }
 
 export default App;

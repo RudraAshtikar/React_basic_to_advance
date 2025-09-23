@@ -1,5 +1,4 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -22,28 +21,14 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
-                  <NavLink
-                    to="/"
-                    className={(isActive) =>
-                      `${
-                        isActive ? "text-orange-700" : "text-gray-700"
-                      } hover:underline`
-                    }
-                  >
+                  <Link to="/" className="hover:underline">
                     Home
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink
-                    to="/about"
-                    className={(isActive) =>
-                      `${
-                        isActive ? "text-orange-700" : "text-gray-700"
-                      } hover:underline`
-                    }
-                  >
+                  <Link to="/about" className="hover:underline">
                     About
-                  </NavLink>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -63,16 +48,9 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <NavLink
-                    to="/"
-                    className={(isActive) =>
-                      `${
-                        isActive ? "text-orange-700" : "text-gray-700"
-                      } hover:underline`
-                    }
-                  >
+                  <Link to="/" className="hover:underline">
                     Discord
-                  </NavLink>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -82,28 +60,14 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
-                  <NavLink
-                    to="#"
-                    className={(isActive) =>
-                      `${
-                        isActive ? "text-orange-700" : "text-gray-700"
-                      } hover:underline`
-                    }
-                  >
+                  <Link to="#" className="hover:underline">
                     Privacy Policy
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink
-                    to="#"
-                    className={(isActive) =>
-                      `${
-                        isActive ? "text-orange-700" : "text-gray-700"
-                      } hover:underline`
-                    }
-                  >
+                  <Link to="#" className="hover:underline">
                     Terms &amp; Conditions
-                  </NavLink>
+                  </Link>
                 </li>
               </ul>
             </div>

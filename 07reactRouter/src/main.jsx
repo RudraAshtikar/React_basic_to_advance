@@ -1,20 +1,18 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
-import {
-  About,
-  Contact,
-  Home,
-  Layout,
-  User,
-} from "./components/index/index.js";
 import {
   createBrowserRouter,
-  createRoutesFromElements,
-  Route,
   RouterProvider,
+  Route,
+  createRoutesFromElements,
 } from "react-router-dom";
+import Layout from "./LAYOUT.JSX";
+import Home from "./Components/Home/Home.jsx";
+import AboutUs from "./Components/AboutUs/About.jsx";
+import Contact from "./Components/Contact/Contact.jsx";
+import User from "./Components/User/User.jsx";
+import Github, { githubInfoLoader } from "./Github/Github.jsx";
 
 // const router = createBrowserRouter([
 //   {
@@ -27,7 +25,7 @@ import {
 //       },
 //       {
 //         path: "about",
-//         element: <About />,
+//         element: <AboutUs />,
 //       },
 //       {
 //         path: "contact",
@@ -41,14 +39,18 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="contact" element={<Contact />} />
-      <Route path="user/:userId" element={<User />} />
+      <Route path="about" element={<AboutUs />} />
+      <Route path="Contact" element={<Contact />} />
+      <Route path="User/:userid" element={<User />} />
+      <Route
+        loader={githubInfoLoader} // if u want you can write the whole API call here only, callbacks are allowed here
+        path="Github"
+        element={<Github />}
+      />
     </Route>
   )
 );
+
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>
+  <RouterProvider router={router} />
 );
