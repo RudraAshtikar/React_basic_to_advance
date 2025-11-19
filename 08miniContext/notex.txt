@@ -1,0 +1,47 @@
+Context is an state management problem, It was not a part of the core react initially but the react team thought that it is such a common problem  that we should include it to the core react itself 
+
+Almost all react projects should include state management Therefore it is an very important topic
+
+Context API means a global variable from which we can access everything
+
+
+UserContext is the global variable 
+As soon as you make a context, it gives you a provider so now user context in itself is a provider
+
+So we apply an wrapper of user context to all the components, so that with the help of user context the componenets inside the wrapper can take access of all the states 
+
+
+WE HAVE  TO MAKE A provider
+------------------------------------------
+ 
+
+ Understanding user context
+
+ First we made an user context file
+
+ const UserContext = React.createContext 
+ this line helps make us this file the context file
+
+ then we have to make a provider file which will help to provide the context 
+
+ we made a UserContextProvider which passes the the data we recieve as it is, for that we use an object{} to pass it so that we can deal with all kinds of data
+
+ then we create <UserContext.Provider> 
+    {children }
+ </UserContext.Provider>
+
+ UserContext.Provider: This is the component that makes the context's value available to its child components. It takes a value prop, which is the data you want to share. Any component wrapped within this Provider can then access this value
+
+     import UserContext from './UserContext';
+
+    function App() {
+      const currentUser = { name: 'John Doe', isAuthenticated: true };
+
+      return (
+        <UserContext.Provider value={currentUser}>
+          {/* All components within this Provider can access currentUser */}
+          <Header />
+          <Dashboard />
+        </UserContext.Provider>
+      );
+    }

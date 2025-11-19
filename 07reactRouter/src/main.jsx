@@ -43,7 +43,7 @@ const router = createBrowserRouter(
       <Route path="Contact" element={<Contact />} />
       <Route path="User/:userid" element={<User />} />
       <Route
-        loader={githubInfoLoader} // if u want you can write the whole API call here only, callbacks are allowed here
+        loader={githubInfoLoader} // if u want you can write the whole API call here, callbacks are allowed here
         path="Github"
         element={<Github />}
       />
