@@ -7,7 +7,7 @@
 //   container.appendChild(domElement);
 // }
 function customRender(reactElement, container) {
-  const domElement = document.createElement(reactElement.type);
+  const domElement = document.createElement(reactElement.type); // .type is necessary because it tells the browser which element type to create
   console.log(domElement);
   domElement.innerHTML = reactElement.children;
   for (prop in reactElement.props) {
@@ -15,6 +15,7 @@ function customRender(reactElement, container) {
     console.log(prop);
     domElement.setAttribute(prop, reactElement.props[prop]);
   }
+  console.log(prop);
   container.appendChild(domElement);
 }
 

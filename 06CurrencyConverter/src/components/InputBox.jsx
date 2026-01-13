@@ -1,4 +1,4 @@
-// Mala pahile he samzun ghyava lagel ki InputBox cha flow kasa ahe and Each ad every line kay sangtay, every variable cha kay upyog ahe and toh vairable kasa upyogat yeto
+// Mala pahile he samzun ghyava lagel ki InputBox cha flow kasa ahe and Each and every line kay sangtay, every variable cha kay upyog ahe and toh vairable kasa upyogat yeto
 // Dusri goshta ha ek ach card ahe te mala dokyat thevla pahije and ha card mi generally kasa use karu shakto he mi vichar kela pahije
 
 import React, { useId } from "react";
@@ -35,7 +35,7 @@ function InputBox({
           value={amount}
           onChange={
             (e) => onAmountChange && onAmountChange(Number(e.target.value))
-            //javascript takes e.target.value in string format but here we want this value in number format thats why we are encasing it inside "Number"
+            //javascript takes e.target.value in string format but here we want this value in number format thats why we are encasing it inside "Number" {VVIMP}
             // && is used as a checker
           }
         />
